@@ -15,18 +15,18 @@ public class BoardController {
     @Autowired
     BoardServiceImpl boardService;
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public String boardList(Model model) {
+    @RequestMapping(value = "/board/list", method = RequestMethod.GET)
+    public String boardlist(Model model){
         model.addAttribute("list", boardService.getBoardList());
-        return "list";
+        return "posts";
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    @RequestMapping(value = "/board/add", method = RequestMethod.GET)
     public String addPost() {
         return "addpostform";
     }
 
-    @RequestMapping(value = "/addok", method = RequestMethod.POST)
+    @RequestMapping(value = "/board/addok", method = RequestMethod.POST)
     public String addPostOk(BoardVO vo) {
         if (boardService.insertBoard(vo) == 0) {
             System.out.println("데이터 추가 실패");
@@ -36,14 +36,14 @@ public class BoardController {
         return "redirect:list";
     }
 
-    @RequestMapping(value = "/editform/{seq}", method = RequestMethod.GET)
+    @RequestMapping(value = "/board/editform/{seq}", method = RequestMethod.GET)
     public String editPost(@PathVariable("seq") int seq, Model model) {
         BoardVO boardVO = boardService.getBoard(seq);
         model.addAttribute("u", boardVO);
         return "editform";
     }
 
-    @RequestMapping(value = "/editok", method = RequestMethod.POST)
+    @RequestMapping(value = "/board/editok", method = RequestMethod.POST)
     public String editPostOk(BoardVO vo) {
         if (boardService.updateBoard(vo) == 0) {
             System.out.println("데이터 수정 실패");
@@ -53,9 +53,9 @@ public class BoardController {
         return "redirect:list";
     }
 
-    @RequestMapping(value = "/deleteok/{id}", method = RequestMethod.GET)
-    public String deletePostOk(@PathVariable("id") int id) {
-        if (boardService.deleteBoard(id) == 0) {
+    @RequestMapping(value = "/board/deleteok/{seq}", method = RequestMethod.GET)
+    public String deletePostOk(@PathVariable("seq") int seq) {
+        if (boardService.deleteBoard(seq) == 0) {
             System.out.println("데이터 삭제 실패");
         } else {
             System.out.println("데이터 삭제 성공");
