@@ -14,4 +14,5 @@ public class HomeController {
         model.addAttribute("serverTime", new Date());
         return "list";
     }
+
 }

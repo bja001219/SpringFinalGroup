@@ -57,7 +57,6 @@
       <version>2.0.6</version>
     </dependency>
 
-
   </dependencies>
   <build>
     <finalName>SpringFinalGroup</finalName>

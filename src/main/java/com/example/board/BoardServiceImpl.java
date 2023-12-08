@@ -37,4 +37,6 @@ public class BoardServiceImpl implements BoardService {
     public List<BoardVO> getBoardList() {
         return boardDAO.getBoardList();
     }
+
+
 }

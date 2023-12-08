@@ -62,4 +62,5 @@
       location.href="deleteok/"+seq;
     }
   }
+
 </script>
