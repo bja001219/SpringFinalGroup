@@ -2,24 +2,24 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="Board">
-    <insert id="insertBoard">
-        insert into BOARD (category, title, writer, content)
+<mapper namespace="board">
+    <insert id="insertboard">
+        insert into Restaurant (name, rating, price, type, phone, time, etc)
         values
-        (#{category}, #{title}, #{writer}, #{content}
+        (#{name}, #{rating}, #{price}, #{type}, #{phone}, #{time}, #{etc})
     </insert>
-    <update id="updateBoard">
-        update BOARD
-        set title = #{title}, content = #{content}, writer = #{writer}, category = #{category}
+    <update id="updateboard">
+        update Restaurant
+        set name = #{name}, rating = #{rating}, price = #{price}, type = #{type}, phone = #{phone}, time = #{time}, etc = #{etc}
         where seq = #{seq}
     </update>
-    <delete id="deleteBoard">
-        delete from BOARD where seq = #{seq}
+    <delete id="deleteboard">
+        delete from Restaurant where seq = #{seq}
     </delete>
-    <select id="getBoard" resultType="board">
-        select * from BOARD where seq = #{seq}
+    <select id="getboard" resultType="board">
+        select * from Restaurant where seq = #{seq}
     </select>
-    <select id="getBoardList" resultType="board">
-        select * from BOARD order by seq desc
+    <select id="getBoardlist" resultType="board">
+        select * from Restaurant order by seq desc
     </select>
 </mapper>

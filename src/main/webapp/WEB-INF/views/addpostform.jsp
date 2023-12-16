@@ -7,15 +7,18 @@
 </head>
 <body>
 <form action="addok" method="POST">
-  <table id = "edit">
-    <tr><td>카테고리</td><td><input type="text" name="category"/></td></tr>
-    <tr><td>제목</td><td><input type="text" name="title"/></td></tr>
-    <tr><td>글쓴이</td><td><input type="text" name="writer"/></td></tr>
-    <tr><td>내용</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
+  <table id="add">
+    <tr><th colspan="2">Add New Restaurant</th></tr>
+    <tr><td>Name</td><td><input type="text" name="name"/></td></tr>
+    <tr><td>Rating</td><td><input type="text" name="rating"/></td></tr>
+    <tr><td>Price</td><td><input type="text" name="price"/></td></tr>
+    <tr><td>Type</td><td><input type="text" name="type"/></td></tr>
+    <tr><td>Phone</td><td><input type="text" name="phone"/></td></tr>
+    <tr><td>Time</td><td><input type="text" name="time"/></td></tr>
+    <tr><td>Additional Info</td><td><textarea cols="50" rows="5" name="etc"></textarea></td></tr>
   </table>
-  <button type="submit">게시글 등록</button>
-  <button type="button" onclick="location.href='list'">목록보기</button>
+  <button type="submit">Register Restaurant</button>
+  <button type="button" onclick="location.href='list'">Go to List</button>
 </form>
-</body>
 </html>
 

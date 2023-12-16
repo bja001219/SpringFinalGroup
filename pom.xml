@@ -7,6 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>SpringFinalGroup Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
   <dependencies>
     <!-- spring webmvc, spring jdbc, junit, jstl, mybatis, mybatis spring, mariadb -->
     <dependency>
@@ -55,6 +56,48 @@
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis-spring</artifactId>
       <version>2.0.6</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>5.3.23</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.30</version> <!-- 버전은 최신 버전으로 확인하고 조정해야 할 수도 있습니다 -->
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.30</version> <!-- 버전은 최신 버전으로 확인하고 조정해야 할 수도 있습니다 -->
+    </dependency>
+
+    <!-- Log4j -->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version> <!-- Log4j의 버전도 확인이 필요합니다 -->
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.33</version>
     </dependency>
 
   </dependencies>
